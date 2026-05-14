@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>The Last Sit - Survival</title>
+    <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+        background-color: #000000; /* Ekranın geri kalanını siyah yapar */
+        width: 100vw;
+        height: 100vh;
+        display: flex;       
+        justify-content: center; /* Yatayda ortalar */
+        align-items: center;     /* Dikeyde ortalar */
+        overflow: hidden;   
+    }
+
+    canvas {
+    background-color: #2b2b2b; 
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+    border: 2px solid #444;
+    cursor: crosshair; 
+    /* EKLENEN KISIM: Oyun ekranını tarayıcının maksimum %85'i kadar sınırla */
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain; /* En-boy oranının bozulmasını engeller */
+}
+</style>
+</head>
+<body>
+    <div id="ui"></div>
+    <canvas id="gameCanvas"></canvas>
+    <script src="game1.js"></script>
+</body>
+</html>
